@@ -4,69 +4,13 @@
 		<title>Page Title</title>
 	</head>
 
-	<style>
-		* {
-		  box-sizing: border-box;
-		}
-
-		.column {
-		  float: left;
-		  width: 50%;
-		  padding: 10px;
-		}
-
-		.row:after {
-		  content: "";
-		  display: table;
-		  clear: both;
-		}
-
-	</style>
 	<body>
-
-		<header>
-		     <nav>
-			  <%= link_to 'Home', root_path %>|
-			  <%= link_to 'About', about_path %>
-			</nav> 
-		</header>
+			
+		<div class="jumbotron center">
+		 	<h1>Alpha Blog</h1>
+		 	<%= link_to "Sign up now", "#", class: "btn btn-secondary btn-lg", id: "jubmo-btn" %>
+		</div>
 		
-		<h1 align='center'>Max's personal blog</h1>
-		<div align='center'>
-			<img m-auto src='https://html5box.com/html5lightbox/images/mountain.jpg' width='850' height='320'>
-		</div>
-
-		<div class='row'>
-			<div class='column' align="center" >
-				<p>
-					Some content in the first column
-				</p>
-
-				<ul>
-					<li>
-						<%= link_to 'Home', root_path %>
-					</li>
-					<li>
-						<%= link_to 'About', about_path %>
-					</li>
-					<li>
-						<%= link_to 'Alpha Blog', articles_path %>
-					</li>
-				</ul>
-
-			</div>
-
-			<div class='column' align="center" >
-				<p>
-					Some content in the second column
-				</p>
-
-				<div>
-					<img src="https://images.pexels.com/photos/34950/pexels-photo.jpg" width='400' height="150">
-				</div>
-
-			</div>
-		</div>
 	</body>
 </html> 
 

@@ -1,1 +1,59 @@
 @import "bootstrap";
+
+.navbar {
+    background-color: #838fc0;
+}
+
+#logo {
+	color: #f9f9fc;
+	float: left;
+	font-size: 1.7em;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-weight: bold;
+}
+
+#logo:hover {
+	color: #5866a2;
+}
+
+.jumbotron {
+	background-image: asset-url('mountain.jpg');
+	background-size: cover;
+	height: 550px;
+	margin-top: 10px;
+}
+
+.jumbotron h1{
+	
+	color: #fff;
+	text-weight: bold;
+}
+
+#jubmo-btn {
+	margin-top: 20px;
+}
+
+.center {
+	text-align: center;
+}
+
+footer {
+	border-top: 1px solid #5866a2;
+	color: #777;
+}
+
+footer small{
+	float: left;
+}
+
+footer ul {
+	float:right;
+	list-style: none;
+}
+
+footer ul li{
+	float: left;
+	margin-left: 15px;
+	color: #777;
+}

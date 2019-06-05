@@ -1,5 +1,7 @@
 <h1 align="center">All alpha bloggers</h1>
 
+<%= render 'shared/pagination', obj: @users %>
+
 <div align="center">
   <% @users.each do |user| %>
 	<div class="user-card">
@@ -15,3 +17,5 @@
 	</div>
   <% end %>
 </div>
+
+<%= render 'shared/pagination', obj: @users %>

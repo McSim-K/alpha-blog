@@ -14,11 +14,13 @@
 
 
 <div class="article-actions">
-	<%= link_to "Edit this article", edit_article_path(@article), class: "badge badge-primary" %>
+	<% if logged_in? && current_user == @article.user %>  
+		<%= link_to "Edit this article", edit_article_path(@article), class: "badge badge-primary" %>
 
-	<%= link_to "Delete this article", article_path(@article), 			method: :delete, 
-				data: { confirm: "Are you sure?" }, 
-				class: "badge badge-danger" %>
+		<%= link_to "Delete this article", article_path(@article), 			method: :delete, 
+					data: { confirm: "Are you sure?" }, 
+					class: "badge badge-danger" %>
+	<% end %>
 
 	<%= link_to "View all articles", articles_path, class: "badge badge-success" %>
 </div>

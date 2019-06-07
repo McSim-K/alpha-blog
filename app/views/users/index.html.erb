@@ -11,6 +11,14 @@
 		    <%= link_to gravatar_for(user), user_path(user) %>
 		    <p class="card-text"><%= link_to user.username.capitalize, user_path(user) %></p>
 		    <small><%= pluralize(user.articles.count, "article") %></small>    
+		    <% if logged_in? and current_user.admin? %>
+		      <div>
+		        <%= link_to "Delete user", user_path(user), method: :delete, 
+                    data: { confirm: "Are you sure?" }, 
+                    class: "badge badge-danger" %>
+                        	
+              </div>
+		    <% end %>
 		  </div>
 		</div>
 	  </div>

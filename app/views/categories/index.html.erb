@@ -1,0 +1,17 @@
+<h1 align="center">All Categories</h1>
+
+<div align="center">
+  <% @categories.each do |category| %>
+    <div class="category-card">
+	  <div class="row">
+		<div class="col-md-4 offset-md-4">
+		  <div class="card">
+			<p class="card-text"><%= link_to "#{category.name}", category_path(category) %></p>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  <% end %>
+</div>
+
+<%= render 'shared/pagination', obj: @categories %>

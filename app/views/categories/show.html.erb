@@ -1,0 +1,7 @@
+<h1 align="center"><%= "Category: " + @category.name.capitalize %></h1>
+
+<%= render 'shared/pagination', obj: @category_articles %>
+
+<%= render 'articles/article', obj: @category_articles %>
+
+<%= render 'shared/pagination', obj: @category_articles %>

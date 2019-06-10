@@ -7,6 +7,11 @@
 
         <small>Created by: <%= article.user.username %>, <%= time_ago_in_words(article.created_at) %> ago,
           last updated: <%= time_ago_in_words(article.updated_at) %> ago</small>
+
+        <% if article.categories.any? %>
+          <small>Categories: <%= render article.categories %></small>
+        <% end %>  
+
         <% if logged_in? && (current_user == article.user || current_user.admin?) %>  
           <div class="article-actions">
             <%= link_to "Edit this article", edit_article_path(article), class: "badge badge-primary" %>
